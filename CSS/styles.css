@@ -270,7 +270,7 @@ header .menu-btn p:hover::after {
 .page3 {
   position: relative;
   height: auto;
-  padding: 10rem;
+  padding: 10%;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -326,11 +326,10 @@ header .menu-btn p:hover::after {
 .page3 .hey {
   position: absolute;
   text-align: center;
-  bottom: 0;
+  bottom: 5%;
   left: 50%;
   width: 100%;
   transform: translate(-50%, 0);
-  padding-bottom: 5%;
   color: #c59245;
   font-weight: 500;
   font-family: swiss, sans-serif;
@@ -848,7 +847,6 @@ nav ul li:hover {
     display: flex;
     width: 100%;
     background-color: #eee4da;
-    border-bottom: solid 4px #c59245;
     z-index: 10;
   }
 }
