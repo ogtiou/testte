@@ -1,0 +1,29 @@
+@font-face {
+    font-family: gunsan;
+    src: url(FONTS/Gunsan.ttf);
+}
+
+@font-face {
+    font-family: swiss;
+    src: url(FONTS/Switzer-Variable.ttf);
+}
+
+@font-face {
+    font-family: bigilla;
+    src: url(FONTS/Bigilla.otf);
+}
+
+@font-face {
+    font-family: dirty;
+    src: url(FONTS/Leky\ Calgria.otf);
+}
+
+@font-face {
+    font-family: humane;
+    src: url(FONTS/Pitch\ Display\ Regular\ Demo.ttf);
+}
+
+@font-face {
+    font-family: ilya;
+    src: url(FONTS/Ilyas.otf);
+}
