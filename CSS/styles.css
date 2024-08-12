@@ -4,6 +4,21 @@
   --green: #acc89f;
 }
 
+::-webkit-scrollbar {
+  width: 14px;
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(193, 193, 193);
+  border-radius: 100vh;
+  border: solid 3px rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(135, 135, 135);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +30,7 @@
 html body {
   width: 100%;
   height: 100%;
+  background-color: var(--bc);
 }
 
 .noS {
@@ -32,7 +48,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 5rem;
+  padding: 2rem 5rem 0;
   width: 100%;
   z-index: 20;
 }
@@ -61,8 +77,14 @@ header .menu-btn {
   font-family: swiss;
   font-size: 1.4em;
   cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: rgba(238, 228, 218, 0.7568627451);
+  border-radius: 100vh;
 }
-header .menu-btn::after {
+header .menu-btn p {
+  position: relative;
+}
+header .menu-btn p::after {
   position: absolute;
   content: "";
   bottom: 0;
@@ -74,7 +96,7 @@ header .menu-btn::after {
   background-color: #c59245;
   transition: 0.4s ease;
 }
-header .menu-btn:hover::after {
+header .menu-btn p:hover::after {
   opacity: 1;
   transform: translateY(0);
 }
@@ -253,7 +275,6 @@ header .menu-btn:hover::after {
   justify-content: center;
   width: 100%;
   background-color: #eee4da;
-  border-bottom: solid 4px #c59245;
   z-index: 10;
 }
 .page3 .studio-text {
@@ -283,12 +304,13 @@ header .menu-btn:hover::after {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.page3 .p3-c video {
+.page3 .p3-c iframe {
   width: 100%;
   height: 100%;
   filter: saturate(80%);
   -o-object-fit: cover;
      object-fit: cover;
+  pointer-events: none;
 }
 .page3 .p3-c .img1-2, .page3 .p3-c .img3-4 {
   position: relative;
@@ -324,7 +346,8 @@ footer {
   height: 80vh;
   bottom: 0;
   left: 0;
-  background-color: #eee4da;
+  background-color: #acc89f;
+  border-radius: 2rem 2rem 0 0;
   z-index: 5;
 }
 footer .bubble1 {
@@ -387,9 +410,7 @@ footer iframe {
   top: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(238, 228, 218, 0.7254901961);
-  -webkit-backdrop-filter: blur(20vh);
-          backdrop-filter: blur(20vh);
+  background-color: #acc89f;
   pointer-events: none;
   z-index: 15;
 }
@@ -412,15 +433,16 @@ nav .bottom-nav {
   justify-content: center;
   gap: 30vw;
   padding: 4rem 0;
+  z-index: 1;
 }
 nav .bottom-nav p {
   cursor: default;
 }
 nav .bottom-nav a, nav .bottom-nav p {
   position: relative;
-  font-size: clamp(0.5rem, 1.2vw, 2rem);
+  font-size: clamp(0.8rem, 1.2vw, 2rem);
   text-decoration: none;
-  color: #c59245;
+  color: var(--bc);
   font-family: sans-serif;
   font-weight: 600;
 }
@@ -433,7 +455,7 @@ nav .bottom-nav a::after, nav .bottom-nav p::after {
   opacity: 0;
   height: 2px;
   transform: translateY(5px);
-  background-color: #c59245;
+  background-color: var(--bc);
   transition: 0.4s ease;
 }
 nav .bottom-nav a:hover::after {
@@ -447,6 +469,7 @@ nav ul {
   flex-direction: column;
   gap: 2rem;
   list-style: none;
+  z-index: 2;
 }
 nav ul li {
   transition: 0.3s ease;
@@ -456,7 +479,7 @@ nav ul li a {
   display: block;
   font-family: swiss, sans-serif;
   text-decoration: none;
-  color: #c59245;
+  color: var(--bc);
   font-weight: bold;
   font-size: clamp(2rem, 5vw, 8rem);
 }
@@ -468,7 +491,7 @@ nav ul li a::before {
   bottom: 0;
   opacity: 0;
   transform: translateY(5px);
-  background-color: #c59245;
+  background-color: var(--bc);
   transition: 0.3s ease;
 }
 nav ul li a:hover::before {
@@ -551,9 +574,7 @@ nav ul li:hover {
   }
   nav .bottom-nav a, nav .bottom-nav p {
     position: relative;
-    font-size: 0.6rem;
     text-decoration: none;
-    color: #c59245;
     font-family: sans-serif;
     font-weight: 600;
   }
@@ -566,7 +587,6 @@ nav ul li:hover {
     opacity: 0;
     height: 2px;
     transform: translateY(5px);
-    background-color: #c59245;
     transition: 0.4s ease;
   }
   nav .bottom-nav a:hover::after {
@@ -589,7 +609,6 @@ nav ul li:hover {
     display: block;
     font-family: swiss, sans-serif;
     text-decoration: none;
-    color: #c59245;
     font-weight: bold;
     font-size: 3rem;
   }
@@ -601,7 +620,6 @@ nav ul li:hover {
     bottom: 0;
     opacity: 0;
     transform: translateY(5px);
-    background-color: #c59245;
     transition: 0.3s ease;
   }
   nav ul li a:hover::before {
@@ -631,7 +649,7 @@ nav ul li:hover {
     font-family: swiss;
     font-size: 1.4em;
     padding: 0.5rem 1rem;
-    background-color: rgba(238, 228, 218, 0.2392156863);
+    background-color: rgba(238, 228, 218, 0.5333333333);
     border-radius: 100vh;
     -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);

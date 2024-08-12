@@ -15,19 +15,19 @@ document.addEventListener("DOMContentLoaded", function() {
     requestAnimationFrame(raf);
 
     // this is page1 to page2 anim -->
-    const btn1 = document.querySelector(".button")
-    const page2 = document.querySelector(".page2")
+    // const btn1 = document.querySelector(".button")
+    // const page2 = document.querySelector(".page2")
 
-    btn1.addEventListener("click", () => {
-        gsap.to(window, {
-            scrollTo: {
-                y: page2,
-            },
-            duration: 0.8,
-            ease: 'power2.inOut'
-        })
-        // document.querySelector(".page2").scrollIntoView({behavior: "smooth"})
-    });
+    // btn1.addEventListener("click", () => {
+    //     gsap.to(window, {
+    //         scrollTo: {
+    //             y: page2,
+    //         },
+    //         duration: 0.8,
+    //         ease: 'power2.inOut'
+    //     })
+    //     // document.querySelector(".page2").scrollIntoView({behavior: "smooth"})
+    // });
 
     // menu -->
     const overlay = document.querySelector(".overlay")
